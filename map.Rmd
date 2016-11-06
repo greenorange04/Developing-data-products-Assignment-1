@@ -1,9 +1,4 @@
----
-# title: ""
-# author: ""
-# date: "5 November 2016"
-# output: html_document
----
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -16,11 +11,14 @@ library(leaflet)
 ## 5 November 2016
 ## Map of Marrakech, Morocco
 ```{r, echo=FALSE}
+
+# first popup which is a standalone popup
 popu1 <- paste(sep = "<br/>",
   "<b><a href='http://www.museedemarrakech.ma'>Musée de Marrakech</a></b>",
   "Place Ben Youssef",
   "Marrakech-Médina, Maroque")
 
+# the second popup, it is associated with a marker
 popup2 <- paste(sep = "<br/>",
   "<b>Palais El Badiî</b>",
   "Ksibat Nhass",

@@ -1,0 +1,36 @@
+---
+# title: ""
+# author: ""
+# date: "5 November 2016"
+# output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(leaflet)
+```
+
+## 5 November 2016
+## Map of Marrakech, Morocco
+```{r, echo=FALSE}
+popu1 <- paste(sep = "<br/>",
+  "<b><a href='http://www.museedemarrakech.ma'>Musée de Marrakech</a></b>",
+  "Place Ben Youssef",
+  "Marrakech-Médina, Maroque")
+
+popup2 <- paste(sep = "<br/>",
+  "<b>Palais El Badiî</b>",
+  "Ksibat Nhass",
+  "Marrakech, Maroque")
+
+m <- leaflet() %>% setView(lng =   -7.98611, lat = 31.6255, zoom = 15) %>% 
+        addTiles() %>%
+  addPopups(-7.986127, 31.631710, popu1,
+    options = popupOptions(closeButton = FALSE)) %>%
+  addMarkers(-7.9861, 31.6181, popup = popup2) 
+m
+```
+
